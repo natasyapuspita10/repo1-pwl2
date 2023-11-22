@@ -16,51 +16,51 @@ class CampBenefitTableSeeder extends Seeder
         $campBenefits = [
             [
                 'camp_id' => 1,
-                'name' => 'Apa Itu Bahagia?',
+                'name' => 'Pro Techstack Kit',
             ],
             [
                 'camp_id' => 1,
-                'name' => 'Mengenal Kebahagiaan',
+                'name' => 'iMac Pro 2021 $ Display',
             ],
             [
                 'camp_id' => 1,
-                'name' => 'Kesedihan Itu Apa?',
+                'name' => '1-1 Mentoring Program',
             ],
             [
                 'camp_id' => 1,
-                'name' => 'Bagaimana Jika Tidak Ada Kesedihan?',
+                'name' => 'Final Project Certificate',
             ],
             [
                 'camp_id' => 1,
-                'name' => 'Bahagia Berasal Dari Mana?',
+                'name' => 'Offline Course Videos',
             ],
             [
                 'camp_id' => 1,
-                'name' => 'Mengenali Perasaan Diri Sendiri',
+                'name' => 'Future Job Opportunity',
             ],
             [
                 'camp_id' => 1,
-                'name' => 'Bagaimana Cara Untuk Bahagia?',
+                'name' => 'Premium Design Kit',
             ],
             [
                 'camp_id' => 1,
-                'name' => 'Pada Akhirnya, Kita Membutuhkannya',
+                'name' => 'Website Builder',
             ],
             [
                 'camp_id' => 2,
-                'name' => 'Mengenal Bebek',
+                'name' => '1-1 Mentoring Program',
             ],
             [
                 'camp_id' => 2,
-                'name' => 'Cara Merawat Bebek',
+                'name' => 'Final Project Certificate',
             ],
             [
                 'camp_id' => 2,
-                'name' => 'Kenali Cara Mengenali Penyakit Pada Bebek',
+                'name' => 'Offline Course Videos',
             ],
             [
                 'camp_id' => 2,
-                'name' => 'Alasan Mengapa Bebek Menggemaskan',
+                'name' => 'Offline Course Videos',
             ],
         ];
 

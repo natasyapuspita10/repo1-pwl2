@@ -19,7 +19,7 @@ Route::middleware('guest')->group(function () {
 
     Route::get('login', function (){
         return view('auth.user.login');
-    })->name('login.admin');
+    })->name('login.user');
 
     Route::get('login/admin', [AuthenticatedSessionController::class, 'create'])
                 ->name('login.admin');

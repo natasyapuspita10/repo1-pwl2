@@ -41,7 +41,7 @@
                 </div>
             @else
                 <div class="d-flex">
-                    <a href="#" class="btn btn-master btn-secondary me-3">
+                    <a href="{{url('/login')}}" class="btn btn-master btn-secondary me-3">
                         Sign In
                     </a>
                     <a href="#" class="btn btn-master btn-primary">
