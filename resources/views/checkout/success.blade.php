@@ -13,9 +13,6 @@
                     <h2 class="primary-header">
                         Checkout Berhasil
                     </h2>
-                    <p class="mt-3">
-                        Terima kasih telah melakukan checkout. Langkah selanjutnya dapat Anda lihat di dashboard Anda.
-                    </p>
                     <a href="{{route('dashboard')}}" class="btn btn-primary mt-3">
                         Ke Dashboard Saya
                     </a>

@@ -95,14 +95,6 @@
                                     </div>
                                 </div>
                                 <button type="submit" class="w-100 btn btn-primary">Pay Now</button>
-                                <div class="col-lg-12">
-                                    <br>
-                                @if('error')
-                                 <a href="{{route('dashboard')}}" class="w-100 btn btn-primary mb-3">
-                                    Back to Dashboard
-                                  </a>
-                                @endif
-                                  </div>
                                 <p class="text-center subheader mt-4">
                                     <img src="{{asset('images/ic_secure.svg')}}" alt=""> 
                                     Your payment is secure and encrypted.
