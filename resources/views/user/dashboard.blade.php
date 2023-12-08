@@ -16,78 +16,45 @@
                 @include('components.alert')
                 <table class="table">
                     <tbody>
+                        @forelse($checkouts as $checkout)
                         <tr class="align-middle">
                             <td width="18%">
-                                <img src="{{asset('images/item_bootcamp.png')}}" height="120" alt="">
+                                <img src="{{secure_asset('images/item_bootcamp.png')}}" height="120" alt="">
                             </td>
                             <td>
                                 <p class="mb-2">
-                                    <strong>Gila Belajar</strong>
+                                    <strong>{{$checkout->camp->title}}</strong>
                                 </p>
                                 <p>
-                                    September 24, 2021
+                                    {{$checkout->created_at->format('M d, Y')}}
                                 </p>
                             </td>
                             <td>
-                                <strong>$280,000</strong>
+                               <strong>Rp. {{$checkout->camp->price}}</strong>
                             </td>
                             <td>
-                                <strong>Waiting for Payment</strong>
+                                <strong class="{{$checkout->payment_status=='paid'?'text-success':'text-secondary'}}">
+                                    {{$checkout->payment_status}}
+                                </strong>
                             </td>
                             <td>
-                                <a href="#" class="btn btn-primary">
-                                    Get Invoice
+                                @if($checkout->payment_status == 'waiting')
+                                <a href="{{$checkout->midtrans_url}}" target="_blank" class="btn btn-primary">Pay Here</a>
+                                @endif
+                            </td>
+                            <td>
+                                <a href="https://wa.me/087889107064?text=Hai, saya ingin bertanya tentang kelas {{$checkout->camp->title}}" class="btn btn-secondary">
+                                    Contact Support
                                 </a>
                             </td>
                         </tr>
+                        @empty
                         <tr class="align-middle">
-                            <td width="18%">
-                                <img src="{{asset('images/item_bootcamp.png')}}" height="120" alt="">
-                            </td>
-                            <td>
-                                <p class="mb-2">
-                                    <strong>Gila Belajar</strong>
-                                </p>
-                                <p>
-                                    September 24, 2021
-                                </p>
-                            </td>
-                            <td>
-                                <strong>$280,000</strong>
-                            </td>
-                            <td>
-                                <strong><span class="text-green">Payment Success</span></strong>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-primary">
-                                    Get Invoice
-                                </a>
+                            <td colspan="5">
+                                <h3>No Data</h3>
                             </td>
                         </tr>
-                        <tr class="align-middle">
-                            <td width="18%">
-                                <img src="{{asset('images/item_bootcamp.png')}}" height="120" alt=" ">
-                            </td>
-                            <td>
-                                <p class=" mb-2 ">
-                                    <strong>Gila Belajar</strong>
-                                </p>
-                                <p>
-                                    September 24, 2021
-                                </p>
-                            </td>
-                            <td>
-                                <strong>$280,000</strong>
-                            </td>
-                            <td>
-                                <strong><span class="text-red ">Canceled</span></strong>
-                            </td>
-                            <td>
-                                <a href="# " class="btn btn-primary ">
-                                    Get Invoice
-                                </a>
-                            </td>
-                        </tr>
+                        @endforelse
                     </tbody>
                 </table>
             </div>

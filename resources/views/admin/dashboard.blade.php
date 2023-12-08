@@ -16,7 +16,7 @@
                                 <th>Price</th>
                                 <th>Register Data</th>
                                 <th>Paid Status</th>
-                                <th>Action</th>  
+                                <!-- <th>Action</th> -->
                             </thead>
                             <tbody>
                                 @forelse($checkouts as $checkout)
@@ -25,7 +25,8 @@
                                     <td>{{$checkout->camp->title}}</td>
                                     <td>Rp. {{$checkout->camp->price}}</td>
                                     <td>{{$checkout->created_at->format('M d Y')}}</td>
-                                    <td>
+                                    <td>{{$checkout->payment_status}}</td>
+                                    <!-- td>
                                         @if ($checkout->is_paid)
                                         <span class="badge bg-success">Paid</span>
                                         @else
@@ -41,7 +42,7 @@
                                             </button>
                                         </form>
                                         @endif
-                                    </td>
+                                    </td> -->
                                 </tr>
                                 @empty
                                 <tr>
